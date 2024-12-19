@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Product>
+<!--
+    Ech ta3mel view data ?
+    ViewData is a dictionary provided by ASP.NET MVC
+    that allows data to be passed from the controller to the view.
+-->
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div>
+    <h1>Browse products</h1>
+    <partial name="_ProductsGridPartial" model="Model"/>
+</div>
+

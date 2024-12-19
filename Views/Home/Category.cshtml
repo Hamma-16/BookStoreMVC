@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] =  @ViewData["CategoryName"];
+}
+<div>
+    <h1>Products in category: @ViewData["CategoryName"]</h1>
+    <partial name="_ProductsGridPartial" model="Model" />
+    @if(!Model.Any())
+    {
+        <p>There are no products in this category.</p>
+    }
+</div>
